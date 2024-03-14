@@ -35,5 +35,4 @@ email TEXT
 subcateogry
 -
 subcategory_id VARCHAR(8) PK
-subcategory 
-
+subcategory  VARCHAR(24)
