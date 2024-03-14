@@ -6,14 +6,14 @@ company_name VARCHAR(48)
 description TEXT 
 goal MONEY 
 pledged MONEY
-outcome BOOLEAN
+outcome VARCHAR(24)
 backers_count INT
 country CHAR(2)
 currency CHAR(3)
 launched_date TIMESTAMP
 end_date TIMESTAMP
 category_id CHAR(4) FK >- category.category_id
-subcategory_id VARCHAR(8) FK >- subcateogry.subcategory_id
+subcategory_id VARCHAR(8) FK >- subcategory.subcategory_id
 
 
 
@@ -32,7 +32,7 @@ last_name VARCHAR(24)
 email TEXT
 
 
-subcateogry
+subcategory
 -
 subcategory_id VARCHAR(8) PK
 subcategory  VARCHAR(24)

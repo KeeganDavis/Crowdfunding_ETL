@@ -1,6 +1,13 @@
 ﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
+-- when importing, import everything that doesn't have a FK dependency first 
+
+DROP TABLE IF EXISTS campaign CASCADE;
+DROP TABLE IF EXISTS category CASCADE;
+DROP TABLE IF EXISTS contacts CASCADE;
+DROP TABLE IF EXISTS subcategory CASCADE;
+
 
 CREATE TABLE "campaign" (
     "cf_id" INT   NOT NULL,
@@ -9,7 +16,7 @@ CREATE TABLE "campaign" (
     "description" TEXT   NOT NULL,
     "goal" MONEY   NOT NULL,
     "pledged" MONEY   NOT NULL,
-    "outcome" BOOLEAN   NOT NULL,
+    "outcome" VARCHAR(24)   NOT NULL,
     "backers_count" INT   NOT NULL,
     "country" CHAR(2)   NOT NULL,
     "currency" CHAR(3)   NOT NULL,
@@ -40,10 +47,10 @@ CREATE TABLE "contacts" (
      )
 );
 
-CREATE TABLE "subcateogry" (
+CREATE TABLE "subcategory" (
     "subcategory_id" VARCHAR(8)   NOT NULL,
     "subcategory" VARCHAR(24)   NOT NULL,
-    CONSTRAINT "pk_subcateogry" PRIMARY KEY (
+    CONSTRAINT "pk_subcategory" PRIMARY KEY (
         "subcategory_id"
      )
 );
@@ -55,5 +62,5 @@ ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_category_id" FOREIGN KEY("cat
 REFERENCES "category" ("category_id");
 
 ALTER TABLE "campaign" ADD CONSTRAINT "fk_campaign_subcategory_id" FOREIGN KEY("subcategory_id")
-REFERENCES "subcateogry" ("subcategory_id");
+REFERENCES "subcategory" ("subcategory_id");
 
