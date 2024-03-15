@@ -43,24 +43,21 @@ To set up the database, first run the the `Postgres_and_ERD/crowdfunding_db_sche
 
 ## Repo Overview 
 
-We approached the repo where we each had identical directory scaffolding and naming conventions, but in directories named after the author of those specific files. Thus Keegan produced everything in `keegan/` and Rley produced everything in `riley/`. 
-
-Inside either of these directories, we have the following directories.
+Inside the root directory we have the following:
 
 `Resources/` contains the starter, provided `csv` files. We extracted and formatted data from these into table `csv` files in the `Output` directory.
--   Note, Riley's notebook references the root directory `Resources` directory, and merely added the `riley/Resources` for symmetry. It is not referenced or used in any capacity.  
 
-`Outputs/` is a directory containing the output, formatted `csv` files. They were saved from the corresponding cells in the `riley/ETL_Mini_Project_RTaylor.ipynb` or `keegan/ETL_Mini_Project_KDavis.ipynb`, depending. 
+`Outputs/` is a directory containing the output, formatted `csv` files. They were saved from the corresponding cells in the `ETL_Mini_Project_KDavis_RTaylor.ipynb`.
 
-`Postgres_and_ERD/` is a directory containing the related database files to set up the database schema, select queries after the tables have been imported, and `crowdfunding_ERD.png`, the ERD for the database schema. In `riley/`, he also has a `QDB_code.txt` which is just the text used to generate the ERD on https://app.quickdatabasediagrams.com.
+`Postgres_and_ERD/` is a directory containing the related database files to set up the database schema, select queries after the tables have been imported, and `crowdfunding_ERD.png`, the ERD for the database schema. 
 
-`riley/ETL_Mini_Project_RTaylor.ipynb` or `keegan/ETL_Mini_Project_KDavis.ipynb` are the jupyter notebooks that formatted and cleaned the starter data into the output `csv` files. 
+`ETL_Mini_Project_KDavis_RTaylor.ipynb` is the jupyter notebook that formatted and cleaned the starter data into the output `csv` files.
 
 
 
 ## Notes
 
-
+If you want to investigate individual efforts/folders, check the development branches. 
 
 
 
